@@ -3,7 +3,7 @@
 		"_postman_id": "6aca64bc-0650-45f8-89a9-b72d111a16ad",
 		"name": "Assignment #1",
 		"description": "## Instructions for Assignment #1\n\n1. **Get the challenge:** Fork the parent collection to your own public workspace.\n    \n2. **Read the instructions:** You will find the tasks you need to complete below.\n    \n3. **Verify your solution:** Select the second folder `Check your solution` and follow the instructions in the documentation to validate your solution.\n    \n\n## Tasks\n\n### Task 1\n\nAdd to the request \"**Get API status**\" a Postman test that verifies the status is 200.\n\nOnce you have established that the test is working as expected, duplicate the request and drag it inside the \"Assignment #1\" collection and put it in the \"API requests\" folder. Ensure the name of the request remains the same.\n\n### Task 2\n\nAdd to the request \"**Get single product**\" a script that parses the JSON response body. Log the value of the property \"product-description\" to the Postman console.\n\nOnce you have established that the script is working as expected, duplicate the request and drag it inside the \"Assignment #1\" collection and put it in the \"API requests\" folder. Ensure the name of the request remains the same.\n\n### Task 3\n\nAdd to the request \"**Create a new order**\" a script that parses the JSON response body and sets a Postman variable named `orderId` with the id of the order that was just created.\n\nOnce you have established that the script is working as expected, duplicate the request and drag it inside the \"Assignment #1\" collection and put it in the \"API requests\" folder. Ensure the name of the request remains the same.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "19132251",
 		"_collection_link": "https://www.postman.com/motiv1/workspace/api-automation-baddge/collection/19132251-6aca64bc-0650-45f8-89a9-b72d111a16ad?action=share&source=collection_link&creator=19132251"
 	},
@@ -43,15 +43,7 @@
 								"value": "application/json"
 							}
 						],
-						"url": {
-							"raw": "{{baseUrl}}/status",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"status"
-							]
-						},
+						"url": "{{baseUrl}}/status",
 						"description": "Retrieve the current status of the API"
 					},
 					"response": [
@@ -60,15 +52,7 @@
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{baseUrl}}/status",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"status"
-									]
-								}
+								"url": "{{baseUrl}}/status"
 							},
 							"status": "OK",
 							"code": 200,
@@ -225,15 +209,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseUrl}}/orders",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"orders"
-							]
-						},
+						"url": "{{baseUrl}}/orders",
 						"description": "Place a new order by providing customer details and ordered products"
 					},
 					"response": []
@@ -339,23 +315,11 @@
 					"request": {
 						"auth": {
 							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "{{postman_api_key}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "X-API-Key",
-									"type": "string"
-								},
-								{
-									"key": "in",
-									"value": "header",
-									"type": "string"
-								}
-							]
+							"apikey": {
+								"value": "{{postman_api_key}}",
+								"key": "X-API-Key",
+								"in": "header"
+							}
 						},
 						"method": "GET",
 						"header": [
