@@ -3,7 +3,7 @@
 		"_postman_id": "54fa5c53-e0a1-4dc6-9a3b-e2b36fadbce4",
 		"name": "Assignment #2",
 		"description": "## Instructions for Assignment #2\n\n1. **Get the challenge:** Fork the parent collection to your own public workspace.\n    \n2. **Read the instructions:** You will find the tasks you need to complete below.\n    \n3. **Verify your solution:** Select the second folder `Check your solution` and follow the instructions in the documentation to validate your solution.\n    \n\n## Tasks\n\n### Task 1\n\nUsing pm.expect() write a status code test for all the requests in the collection.\n\n### Task 2\n\nOnce you have established that the tests are working as expected, duplicate all the folders from the collection. Drag the folder copies inside the \"Assignment #2\" collection and put them in the \"API requests\" folder. Ensure the name of the request remains the same.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "19132251",
 		"_collection_link": "https://www.postman.com/motiv1/workspace/api-automation-baddge/collection/19132251-54fa5c53-e0a1-4dc6-9a3b-e2b36fadbce4?action=share&source=collection_link&creator=19132251"
 	},
@@ -46,15 +46,7 @@
 										"value": "application/json"
 									}
 								],
-								"url": {
-									"raw": "{{baseUrl}}/status",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"status"
-									]
-								},
+								"url": "{{baseUrl}}/status",
 								"description": "Retrieve the current status of the API"
 							},
 							"response": [
@@ -63,15 +55,7 @@
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/status",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"status"
-											]
-										}
+										"url": "{{baseUrl}}/status"
 									},
 									"status": "OK",
 									"code": 200,
@@ -326,15 +310,7 @@
 									"mode": "raw",
 									"raw": "{\n    \"email\": \"{{$randomExampleEmail}}\"\n}"
 								},
-								"url": {
-									"raw": "{{baseUrl}}/clients",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"clients"
-									]
-								},
+								"url": "{{baseUrl}}/clients",
 								"description": "Register a new API client by providing an email address"
 							},
 							"response": [
@@ -358,15 +334,7 @@
 												}
 											}
 										},
-										"url": {
-											"raw": "{{baseUrl}}/clients",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"clients"
-											]
-										}
+										"url": "{{baseUrl}}/clients"
 									},
 									"status": "Created",
 									"code": 201,
@@ -398,15 +366,7 @@
 											"mode": "raw",
 											"raw": "{\n    \"email\": \"{{$randomExampleEmail}}\"\n}"
 										},
-										"url": {
-											"raw": "{{baseUrl}}/clients",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"clients"
-											]
-										}
+										"url": "{{baseUrl}}/clients"
 									},
 									"status": "OK",
 									"code": 200,
@@ -509,15 +469,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "{{baseUrl}}/orders",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orders"
-									]
-								},
+								"url": "{{baseUrl}}/orders",
 								"description": "Place a new order by providing customer details and ordered products"
 							},
 							"response": []
@@ -554,15 +506,7 @@
 										"value": "application/json"
 									}
 								],
-								"url": {
-									"raw": "{{baseUrl}}/orders",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orders"
-									]
-								}
+								"url": "{{baseUrl}}/orders"
 							},
 							"response": []
 						},
@@ -663,18 +607,10 @@
 					],
 					"auth": {
 						"type": "apikey",
-						"apikey": [
-							{
-								"key": "value",
-								"value": "{{vault:authorization-secret}}",
-								"type": "string"
-							},
-							{
-								"key": "key",
-								"value": "x-api-key",
-								"type": "string"
-							}
-						]
+						"apikey": {
+							"value": "{{vault:authorization-secret}}",
+							"key": "x-api-key"
+						}
 					},
 					"event": [
 						{
@@ -876,23 +812,11 @@
 					"request": {
 						"auth": {
 							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "{{vault:postman-api-key}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "X-API-Key",
-									"type": "string"
-								},
-								{
-									"key": "in",
-									"value": "header",
-									"type": "string"
-								}
-							]
+							"apikey": {
+								"value": "{{vault:postman-api-key}}",
+								"key": "X-API-Key",
+								"in": "header"
+							}
 						},
 						"method": "GET",
 						"header": [
