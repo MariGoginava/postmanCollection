@@ -25,20 +25,20 @@ jobs:
 
       - name: Run Assignment #1
         run: |
-          postman collection run "Assignment #1.postman_collection.json"
+          postman collection run "Assignment #1.json"
 
       - name: Run Assignment #2
         run: |
-          postman collection run "Assignment #2.postman_collection.json"
+          postman collection run "Assignment #2.json"
 
       - name: Run Assignment #3
         run: |
-          postman collection run "Assignment #3.postman_collection.json"
+          postman collection run "Assignment #3.json"
 
       - name: Run Assignment #4
         run: |
-          postman collection run "Assignment #4.postman_collection.json"
-
+          postman collection run "Assignment #4.json"
+      
       - name: Run Assignment #5
         run: |
-          postman collection run "Assignment #5.postman_collection.json"
+          postman collection run "Assignment #5.json"    
