@@ -3,7 +3,7 @@
 		"_postman_id": "78da125a-e46f-4a8d-8155-5ab40b967f37",
 		"name": "Assignment #3",
 		"description": "## Instructions for Assignment #3\n\n1. **Get the challenge:** Fork the parent collection to your own public workspace.\n2. **Read the instructions:** You will find the tasks you need to complete below.\n3. **Verify your solution:** Select the second folder `Check your solution` and follow the instructions in the documentation to validate your solution.\n    \n\n## Tasks\n\nAll of the following tasts refer to the request \"Get an order by ID\".\n\n### Task 1\n\nWrite an assertion to verify that the response is in JSON format.\n\n### Task 2\n\nWrite a test with two assertions to verify the following:\n\n- The existence of the property \"id\" in the response.\n- The value of the \"id\" property matches the regular expression pattern: `^[A-Z0-9]{9}$`.\n    \n\n### Task 3\n\nWrite a test with two assertions to verify the following:\n\n- The existence of the property \"products\" in the response.\n- The value of the \"products\" property is an array.\n    \n\n### Task 4\n\nOnce you have established that the tests are working as expected, duplicate request from the collection. Drag the request copy inside the \"Assignment #3\" collection and put them in the \"API requests\" folder. Ensure the name of the request remains the same.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "19132251",
 		"_collection_link": "https://www.postman.com/motiv1/workspace/api-automation-baddge/collection/19132251-78da125a-e46f-4a8d-8155-5ab40b967f37?action=share&source=collection_link&creator=19132251"
 	},
@@ -57,15 +57,7 @@
 							"mode": "raw",
 							"raw": "{\n    \"email\": \"{{$randomExampleEmail}}\"\n}"
 						},
-						"url": {
-							"raw": "{{baseUrl}}/clients",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"clients"
-							]
-						},
+						"url": "{{baseUrl}}/clients",
 						"description": "Register a new API client by providing an email address"
 					},
 					"response": [
@@ -89,15 +81,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "{{baseUrl}}/clients",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"clients"
-									]
-								}
+								"url": "{{baseUrl}}/clients"
 							},
 							"status": "Created",
 							"code": 201,
@@ -129,15 +113,7 @@
 									"mode": "raw",
 									"raw": "{\n    \"email\": \"{{$randomExampleEmail}}\"\n}"
 								},
-								"url": {
-									"raw": "{{baseUrl}}/clients",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"clients"
-									]
-								}
+								"url": "{{baseUrl}}/clients"
 							},
 							"status": "OK",
 							"code": 200,
@@ -223,23 +199,11 @@
 					"request": {
 						"auth": {
 							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "{{token}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "X-API-Key",
-									"type": "string"
-								},
-								{
-									"key": "in",
-									"value": "header",
-									"type": "string"
-								}
-							]
+							"apikey": {
+								"value": "{{token}}",
+								"key": "X-API-Key",
+								"in": "header"
+							}
 						},
 						"method": "POST",
 						"header": [
@@ -262,15 +226,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseUrl}}/orders",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"orders"
-							]
-						},
+						"url": "{{baseUrl}}/orders",
 						"description": "Place a new order by providing customer details and ordered products"
 					},
 					"response": []
@@ -325,23 +281,11 @@
 					"request": {
 						"auth": {
 							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "{{token}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "X-API-Key",
-									"type": "string"
-								},
-								{
-									"key": "in",
-									"value": "header",
-									"type": "string"
-								}
-							]
+							"apikey": {
+								"value": "{{token}}",
+								"key": "X-API-Key",
+								"in": "header"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -522,23 +466,11 @@
 					"request": {
 						"auth": {
 							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "{{vault:postman-api-key}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "X-API-Key",
-									"type": "string"
-								},
-								{
-									"key": "in",
-									"value": "header",
-									"type": "string"
-								}
-							]
+							"apikey": {
+								"value": "{{vault:postman-api-key}}",
+								"key": "X-API-Key",
+								"in": "header"
+							}
 						},
 						"method": "GET",
 						"header": [
