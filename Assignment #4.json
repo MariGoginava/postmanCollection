@@ -3,7 +3,7 @@
 		"_postman_id": "3e3b3f43-0e0a-4831-82fd-734e9fc5ef79",
 		"name": "Assignment #4",
 		"description": "## Instructions for Assignment #4\n\n1. **Get the challenge:** Fork the parent collection to your own public workspace.\n    \n2. **Read the instructions:** You will find the tasks you need to complete below.\n    \n3. **Verify your solution:** Select the second folder `Check your solution` and follow the instructions in the documentation to validate your solution.\n    \n\n## Tasks\n\nFor the request \"Get single product\" you will need to write a JSON schema and test with an assertion that verifies if the response body matches the JSON schema.\n\n### Task 1\n\nThe JSON schema expects that the response is an object.\n\n### Task 2\n\nExpand the JSON schema and ensure that all properties present in the response body are required.\n\n### Task 3\n\nExpand the JSON schema and ensure that no additioanl properties are allowed.\n\n### Task 4\n\nOnce you have established that the tests are working as expected, duplicate request from the collection. Drag the request copies inside the \"Assignment #4\" collection and put them in the \"API requests\" folder. Ensure the name of the request remains the same.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "19132251",
 		"_collection_link": "https://www.postman.com/motiv1/workspace/api-automation-baddge/collection/19132251-3e3b3f43-0e0a-4831-82fd-734e9fc5ef79?action=share&source=collection_link&creator=19132251"
 	},
@@ -241,23 +241,11 @@
 					"request": {
 						"auth": {
 							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "{{vault:postman-api-key}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "X-API-Key",
-									"type": "string"
-								},
-								{
-									"key": "in",
-									"value": "header",
-									"type": "string"
-								}
-							]
+							"apikey": {
+								"value": "{{vault:postman-api-key}}",
+								"key": "X-API-Key",
+								"in": "header"
+							}
 						},
 						"method": "GET",
 						"header": [
