@@ -14,15 +14,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install Newman (Postman CLI runner)
-        run: npm install -g newman
-
-      - name: Run Postman collection
+      - name: Install Postman CLI
         run: |
-          newman run collection.json \
-          --reporters cli
+          curl -o- "https://api.postman.com/downloads/postman-cli/latest/linux_64" \
+            | tar -xz -C /usr/local/bin
+
+      - name: Authenticate Postman CLI
+        run: |
+          postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+
+      - name: Run Assignment #1
+        run: |
+          postman collection run "Assignment #1.postman_collection.json"
+
+      - name: Run Assignment #2
+        run: |
+          postman collection run "Assignment #2.postman_collection.json"
+
+      - name: Run Assignment #3
+        run: |
+          postman collection run "Assignment #3.postman_collection.json"
+
+      - name: Run Assignment #4
+        run: |
+          postman collection run "Assignment #4.postman_collection.json"
