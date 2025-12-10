@@ -16,8 +16,9 @@ jobs:
 
       - name: Install Postman CLI
         run: |
-          curl -L -o postman-cli.deb https://dl.pstmn.io/download/latest/linux64
-          sudo dpkg -i postman-cli.deb
+          curl -L https://dl.pstmn.io/download/latest/linux64 -o postman
+          chmod +x postman
+          sudo mv postman /usr/local/bin/postman
       
       - name: Authenticate Postman CLI
         run: |
