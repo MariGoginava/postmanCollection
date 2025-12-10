@@ -16,9 +16,10 @@ jobs:
 
       - name: Install Postman CLI
         run: |
-          curl -L https://dl.pstmn.io/download/latest/linux64 -o postman
+          curl -L https://dl.pstmn.io/download/v10.21.3/linux64 -o postman
           chmod +x postman
           sudo mv postman /usr/local/bin/postman
+
       
       - name: Authenticate Postman CLI
         run: |
