@@ -38,3 +38,7 @@ jobs:
       - name: Run Assignment #4
         run: |
           postman collection run "Assignment #4.postman_collection.json"
+
+      - name: Run Assignment #5
+        run: |
+          postman collection run "Assignment #5.postman_collection.json"
